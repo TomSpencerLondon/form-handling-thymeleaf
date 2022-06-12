@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+  <link th:href="@{/tailwind.css}" href="../../static/tailwind.css" rel="stylesheet">
+</head>
+<body>
+<main class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <h1 class="text-xl font-bold my-4">Create user</h1>
+  <form th:object="${formData}"
+        th:action="@{/users/create}"
+        method="post">
+    <div>
+      <label for="givenName" class="block text-sm font-medium text-gray-700">Given name</label>
+      <div class="mt-1 relative rounded-md shadow-sm">
+        <input id="givenName"
+               class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+               type="text"
+               th:field="*{givenName}">
+        <div th:if="${#fields.hasErrors('givenName')}"
+             class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+          <!-- Heroicon name: solid/exclamation-circle -->
+          <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+               aria-hidden="true">
+            <path fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                  clip-rule="evenodd"/>
+          </svg>
+        </div>
+      </div>
+      <p th:if="${#fields.hasErrors('givenName')}"
+         class="mt-2 text-sm text-red-600"
+         th:text="${#strings.listJoin(#fields.errors('givenName'), ', ')}">Error message goes here</p>
+    </div>
+    <div>
+      <label for="familyName" class="block text-sm font-medium text-gray-700">Family name</label>
+      <div class="mt-1 relative rounded-md shadow-sm">
+        <input id="familyName"
+               class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+               type="text"
+               th:field="*{familyName}">
+        <div th:if="${#fields.hasErrors('familyName')}"
+             class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+          <!-- Heroicon name: solid/exclamation-circle -->
+          <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+               aria-hidden="true">
+            <path fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                  clip-rule="evenodd"/>
+          </svg>
+        </div>
+      </div>
+      <p th:if="${#fields.hasErrors('familyName')}"
+         class="mt-2 text-sm text-red-600"
+         th:text="${#strings.listJoin(#fields.errors('familyName'), ', ')}">Error message goes here</p>
+    </div>
+
+    <button type="submit"
+            class="inline-flex items-center px-4 py-2 mt-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    >Create user</button>
+
+  </form>
+</main>
+
+</body>
+</html>

@@ -18,3 +18,5 @@ mvn package
 == Running
 
 Run from IntelliJ IDEA or use mvn spring-boot:run
+
+tailwindcss -i ./src/main/resources/static/base.css -o ./src/main/resources/static/tailwind.css --watch

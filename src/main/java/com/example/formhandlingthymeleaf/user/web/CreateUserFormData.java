@@ -17,4 +17,12 @@ public class CreateUserFormData {
   public UserCreationParameters toParameters() {
     return new UserCreationParameters(givenName, familyName);
   }
+
+  public String getGivenName() {
+    return givenName;
+  }
+
+  public String getFamilyName() {
+    return familyName;
+  }
 }
