@@ -20,3 +20,15 @@ mvn package
 Run from IntelliJ IDEA or use mvn spring-boot:run
 
 tailwindcss -i ./src/main/resources/static/base.css -o ./src/main/resources/static/tailwind.css --watch
+
+
+== http://localhost:8080/create
+
+image::https://user-images.githubusercontent.com/27693622/173224330-ce068c79-5a9b-4efb-9f65-d240269dd840.png[]
+
+== http://localhost:8080/users
+
+image::https://user-images.githubusercontent.com/27693622/173224405-60791b8c-75c7-4680-b422-501193be20a2.png[]
+
+
+

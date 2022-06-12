@@ -1,11 +1,12 @@
 package com.example.formhandlingthymeleaf.user;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "`User`")
+@Entity
+@Table(name = "`users`")
 public class User {
 
   @Id

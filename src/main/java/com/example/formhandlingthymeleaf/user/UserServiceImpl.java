@@ -1,9 +1,5 @@
 package com.example.formhandlingthymeleaf.user;
 
-import com.example.formhandlingthymeleaf.user.User;
-import com.example.formhandlingthymeleaf.user.UserCreationParameters;
-import com.example.formhandlingthymeleaf.user.UserRepository;
-import com.example.formhandlingthymeleaf.user.UserService;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
