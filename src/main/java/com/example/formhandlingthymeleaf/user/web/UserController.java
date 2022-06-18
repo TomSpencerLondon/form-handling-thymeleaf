@@ -30,7 +30,7 @@ public class UserController {
   @PostMapping("/create")
   public String doCreateUser(@Valid @ModelAttribute("formData") CreateUserFormData formData, BindingResult bindingResult, Model model) {
     if (bindingResult.hasErrors()) {
-      return "redirect:/create";
+      return "users/create";
     }
 
     service.createUser(formData.toParameters());
